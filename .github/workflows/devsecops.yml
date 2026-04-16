@@ -40,7 +40,7 @@ jobs:
         JWT_SECRET:  ${{ secrets.JWT_SECRET_TEST }}
       run: |
         mvn sonar:sonar \
-          -Dsonar.projectKey=8387745 \
+          -Dsonar.projectKey=8387745_sbi-dev-sec-op \
           -Dsonar.organization=8387745 \
           -Dsonar.login=$SONAR_TOKEN
 
