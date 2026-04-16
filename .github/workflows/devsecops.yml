@@ -36,10 +36,11 @@ jobs:
     # ── 4. SAST — SonarCloud ─────────────────────────────────────
     - name: SAST — SonarCloud scan
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.JWT_SECRET }}
         JWT_SECRET:  ${{ secrets.JWT_SECRET_TEST }}
       run: |
         mvn sonar:sonar \
+          -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.projectKey=8387745_sbi-dev-sec-op \
           -Dsonar.organization=8387745 \
           -Dsonar.login=$SONAR_TOKEN
