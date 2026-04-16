@@ -40,8 +40,8 @@ jobs:
         JWT_SECRET:  ${{ secrets.JWT_SECRET_TEST }}
       run: |
         mvn sonar:sonar \
-          -Dsonar.projectKey=sbi-ems \
-          -Dsonar.organization=vaman-pundit \
+          -Dsonar.projectKey=8387745 \
+          -Dsonar.organization=8387745 \
           -Dsonar.login=$SONAR_TOKEN
 
     # ── 5. Docker Build ──────────────────────────────────────────
